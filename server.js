@@ -1,8 +1,8 @@
-// const express = require('express');
-// const path = require('path');
-// const fs = require('fs');
-// const util = require('util');
-// const { error } = require('console');
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
+const util = require('util');
+const { error } = require('console');
 
 // function to write notes to db.json file
 
@@ -35,7 +35,7 @@
 //     }
 // }
 
-// // setting up server 2
+// // setting up server 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
