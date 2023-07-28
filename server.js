@@ -36,23 +36,23 @@
 // }
 
 // // setting up server 2
-// const PORT = process.env.PORT || 3001;
-// const app = express();
+const PORT = process.env.PORT || 3001;
+const app = express();
 
-// const readAsync = util.promisify(fs.readFile)
+const readAsync = util.promisify(fs.readFile)
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// // // middleware
-// app.use(express.static("public"));
+// // middleware
+app.use(express.static("public"));
 
-// // // routes
-// app.get('/api/notes', (req, res) => {
-//     readAsync('./db/db.json'). then((data)=> {
-//         res.json(JSON.parse(data))
-//     })
-// });
+// // routes
+app.get('/api/notes', (req, res) => {
+    readAsync('./db/db.json'). then((data)=> {
+        res.json(JSON.parse(data))
+    })
+});
 
 
 app.post('/api/notes', (req, res) => {
